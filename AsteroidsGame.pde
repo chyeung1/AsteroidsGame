@@ -30,7 +30,7 @@ public void draw()
 public void keyPressed() {
   if(key == 'e') { max.hyperspace(); }
   if(key == 'w') { max.accelerate(0.5); }
-  if(key == 'a') { max.turn( -5); }
-  if(key == 'd') { max.turn(5); }
+  if(key == 'a') { max.turn( -10); }
+  if(key == 'd') { max.turn(10); }
   if(key == 's') { max.accelerate(-0.5); }
 }
