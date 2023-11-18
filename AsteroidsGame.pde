@@ -6,7 +6,7 @@ public void setup()
 {
   //your code here
   frameRate(240);
-  size(1000,1000);
+  size(750,750);
   for(int i = 0; i < john.length; i++) 
   john[i] = new Floater();
   
