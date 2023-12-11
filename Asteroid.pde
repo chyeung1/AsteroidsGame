@@ -18,8 +18,8 @@ class Asteroid extends Floater {
     yCorners[4] = 5 * size;
     xCorners[5] = -5 * size;
     yCorners[5] = 0;
-    myCenterX = Math.random() * 500;
-    myCenterY = Math.random() * 500;
+    myCenterX = Math.random() * 1000;
+    myCenterY = Math.random() * 1000;
     myColor = color(255);
     myPointDirection = Math.random() * 360;
     rotSpeed = Math.random() * 2 - 1;
@@ -30,10 +30,7 @@ class Asteroid extends Floater {
     turn(rotSpeed);
     super.move();
   }
-  public boolean isTouching() {
-    if(dist((float)max.getCenterX(), (float)max.getCenterY(), (float)myCenterX, (float)myCenterY) < 6 * size) {
-      return true;
-    }
-    else return false;
+  public boolean isTouching(Spaceship ship) {
+    return (dist((float)ship.getCenterX(), (float)ship.getCenterY(), (float)myCenterX, (float)myCenterY) < 6 * size);
   }
 }
